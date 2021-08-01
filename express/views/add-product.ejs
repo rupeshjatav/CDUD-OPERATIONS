@@ -1,0 +1,38 @@
+<%- include('layouts/head.ejs')%>
+
+    <body>
+        <%- include('layouts/navigation.ejs')%>
+            <br>
+            <br>
+            <div class="container my-5">
+                <form action="/admin/add-product" class="my-5" method="POST">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="product_id">PRODUCT TITLE</label>
+                        <div class="col-md-4">
+                            <input id="product_id" name="title" placeholder="PRODUCT ID" class="form-control input-md" required="" type="text">
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="product_name">PRODUCT PRiCE</label>
+                        <div class="col-md-4">
+                            <input id="product_name" name="price" placeholder="PRODUCT NAME" class="form-control input-md" required="" type="text">
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="product_name_fr">PRODUCT DESCRIPTION </label>
+                        <div class="col-md-4">
+                            <input id="product_name_fr" name="description" placeholder="PRODUCT DESCRIPTION FR" class="form-control input-md" required="" type="text">
+
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+    </body>
+    <%- include('layouts/footer.ejs')%>

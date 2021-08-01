@@ -1,0 +1,27 @@
+<%- include('layouts/head.ejs')%>
+
+    <body>
+        <%- include('layouts/navigation.ejs')%>
+            <br>
+            <br>
+            <div class="container my-5">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <h1>
+                            <%= producks.title %>
+                        </h1>
+                        <h2>
+                            <%= producks.price %>
+                        </h2>
+                        <p>
+                            <%= producks.description %>
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum aperiam voluptatum recusandae at dolor. Eligendi, dolorum eum fugit quisquam est a tque dignissimos placeat modi repellat exercitationem laudantium iste ullam consectetur?
+                    </div>
+                </div>
+            </div>
+
+    </body>
+    <%- include('layouts/footer.ejs')%>

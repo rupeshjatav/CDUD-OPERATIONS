@@ -1,0 +1,48 @@
+<%- include('layouts/head.ejs')%>
+
+    <body>
+        <%- include('layouts/navigation.ejs')%>
+            <br>
+
+            <!-- Page Content -->
+            <div class="container">
+                <div class="row">
+                    <%- include('layouts/sidebar.ejs')%>
+                        <div class="col-lg-9">
+                            <%- include('layouts/carousel.ejs')%>
+                                <div class="row">
+                                    <% for(let i of prods)  {%>
+                                        <div class="col-lg-4 col-md-6 mb-4 ">
+                                            <div class="card" style="width: 15rem;">
+                                                <img class="card-img-top" src="https://images.all-free-download.com/images/graphiclarge/small_green_tree_200348.jpg" alt="Card image cap">
+                                                <div class="card-body">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">
+                                                            <a href="#">
+                                                                <%= i.title%>
+                                                            </a>
+                                                        </h4>
+                                                        <h5>$
+                                                            <%= i.price%>
+                                                        </h5>
+                                                        <p class="card-text">
+                                                            <%= i.product_description %>
+                                                        </p>
+                                                        <a href="/view-product/<%= i.id %>" class="btn btn-primary">
+                                                                            VIEW DETAILS
+                                                    </a>
+                                                        <a href="/edit-product/<%= i.id %>">EDIT</a>
+                                                        <form action="/delete-product" method="POST">
+                                                            <input type="hidden" name="id" value="<%=i.id%>">
+                                                            <button type="submit" class="btn btn-primary">Delete</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <%}%>
+                                </div>
+                        </div>
+                </div>
+    </body>
+    <%- include('layouts/footer.ejs')%>
