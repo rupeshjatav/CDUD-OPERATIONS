@@ -49,8 +49,7 @@ app.use((req, res, next) => {
 
 mongoose.connect('mongodb://localhost:27017/onlineshopping', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
-        const port = Process.env.PORT || 3000;
-        app.listen(port, () => {
+        app.listen(3000, () => {
             console.log('Server is running on 3000');
         });
     })
